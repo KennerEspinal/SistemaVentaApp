@@ -72,10 +72,10 @@ export class ModalCategoriaComponent implements OnInit {
       this._categoriaServicio.guardar(_categoria).subscribe({
         next: (data) => {
           if (data.status) {
-            this._utilidadServicio.mostrarAlerta("El producto fue registrado", "Exito");
+            this._utilidadServicio.mostrarAlerta("La categoria fue registrada", "Exito");
             this.modalActual.close("true")
           } else
-            this._utilidadServicio.mostrarAlerta("No se pudo registrar el producto", "Error")
+            this._utilidadServicio.mostrarAlerta("No se pudo registrar la categoria", "Error")
         },
         error: (e) => { }
       })
@@ -85,10 +85,10 @@ export class ModalCategoriaComponent implements OnInit {
       this._categoriaServicio.editar(_categoria).subscribe({
         next: (data) => {
           if (data.status) {
-            this._utilidadServicio.mostrarAlerta("El producto fue editado", "Exito");
+            this._utilidadServicio.mostrarAlerta("La categoria fue editada", "Exito");
             this.modalActual.close("true")
           } else
-            this._utilidadServicio.mostrarAlerta("No se pudo editar el producto", "Error")
+            this._utilidadServicio.mostrarAlerta("No se pudo editar la categoria", "Error")
         },
         error: (e) => { }
       })
